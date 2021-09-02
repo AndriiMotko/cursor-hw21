@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Post from "./components/Post/Post";
+import { useSelector } from "react-redux";
+import AddPostForm from "./components/AddPostForm/AddPostForm";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const postFromStore = useSelector((store) => store.posts);
+	return (
+		<div className="App">
+			<AddPostForm />
+			{postFromStore.map((post, index) => (
+				<Post {...post} key={index} />
+			))}
+		</div>
+	);
 }
 
 export default App;

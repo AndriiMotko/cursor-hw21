@@ -1,0 +1,53 @@
+.addPostWrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	background-color: rgb(29, 44, 58);
+	border: 1px solid rgb(109, 109, 109);
+	padding: 20px 15px 20px 15px;
+	color: rgb(255, 255, 255);
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+select,
+textarea,
+input {
+	margin: 5px 0 5px 0;
+	padding: 5px;
+    font-family: "Georama", sans-serif;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+	margin: 15px 0 0 0;
+	padding: 5px;
+	width: 200px;
+	align-self: center;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.btn-grad {background-image: linear-gradient(to right, #16222A 0%, #3A6073  51%, #16222A  100%)}
+.btn-grad {
+   margin: 10px;
+   padding: 8px 45px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 10px #eee;
+   border-radius: 10px;
+   display: block;
+ }
+
+ .btn-grad:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+
+
